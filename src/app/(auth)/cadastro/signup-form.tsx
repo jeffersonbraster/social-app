@@ -51,7 +51,7 @@ const SignupForm = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="kaijuN99" {...field} />
+                <Input placeholder="kaijuN8" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -66,7 +66,7 @@ const SignupForm = () => {
               <FormLabel>Username</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="kaijun99@gmail.com"
+                  placeholder="kaijun8@gmail.com"
                   type="email"
                   {...field}
                 />

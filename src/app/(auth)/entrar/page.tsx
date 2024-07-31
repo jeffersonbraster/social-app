@@ -3,6 +3,11 @@ import LoginForm from "./login-form";
 import Link from "next/link";
 import Image from "next/image";
 import loginImage from "@/assets/login-image.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Entrar",
+};
 
 const LoginPage = () => {
   return (
@@ -15,7 +20,10 @@ const LoginPage = () => {
 
           <div className="space-y-5">
             <LoginForm />
-            <Link href={"/signup"} className="block text-clip hover:underline">
+            <Link
+              href={"/cadastro"}
+              className="block text-clip hover:underline"
+            >
               Ainda não tem uma conta? Cadastre aqui!
             </Link>
           </div>

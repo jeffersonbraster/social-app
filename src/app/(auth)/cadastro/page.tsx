@@ -24,7 +24,10 @@ const SingUpPage = () => {
           <div className="space-y-5">
             <SignupForm />
 
-            <Link href={"/login"} className="block text-center hover:underline">
+            <Link
+              href={"/entrar"}
+              className="block text-center hover:underline"
+            >
               Já tem uma conta? Faça login
             </Link>
           </div>
