@@ -24,3 +24,28 @@ export async function submitPost(input: {
 
   return newPost
 }
+
+export async function deletePost(id: string) {
+  const { user } = await validateRequest()
+
+  if (!user) throw new Error("Usuário não autorizado")
+
+  const post = await prisma.post.findUnique({
+    where: {
+      id: id
+    }
+  })
+
+  if (!post) throw new Error("Post não encontrado")
+
+  if (post.userId !== user.id) throw new Error("Usuário não autorizado")
+
+  const deletePost = await prisma.post.delete({
+    where: {
+      id: id
+    },
+    include: postDataInclude
+  })
+
+  return deletePost
+}
